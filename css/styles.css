@@ -1,0 +1,140 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-Dark-Blue: hsl(234, 12%, 34%);
+    --grayish-Blue: hsl(229, 6%, 66%);
+    --very-Light-Gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 100%, 100%);
+    --font-family: 'Poppins', sans-serif;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*Globales*/
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--very-Light-Gray);
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 200;
+    color: var(--very-Dark-Blue);
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 3rem 3rem 0;
+}
+
+.content {
+    margin: 2rem auto 0 auto;
+    width: 90%;
+    max-width: 120rem;
+}
+
+.cards {
+    grid-template-columns: 1fr;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title span {
+    font-weight: 600;
+}
+
+.intro {
+    font-weight: 400;
+    color: var(--grayish-Blue);
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+
+.card {
+    background-color: var(--white);
+    height: 25rem;
+    width: 35rem;
+    padding: 3rem;
+    margin: 1.5rem;
+
+    -webkit-box-shadow: 0px 10px 25px 8px rgba(219,227,240,1);
+    -moz-box-shadow: 0px 10px 25px 8px rgba(219,227,240,1);
+    box-shadow: 0px 10px 25px 8px rgba(219,227,240,1);
+    border-radius: 5px;
+    position: relative;
+}
+
+
+.supervisor {
+    border-top: solid 4px var(--cyan);
+}
+
+.builder {
+    border-top: solid 4px var(--red);
+}
+
+.karma {
+    border-top: solid 4px var(--orange);
+    margin-top: 3rem;
+}
+
+.calculator {
+    border-top: solid 4px var(--blue);
+}
+
+.area {
+    margin: 0 0 1rem 0;
+    color: var(--very-Dark-Blue);
+}
+
+.parrafo {
+    color: var(--grayish-Blue);
+}
+
+
+@media (min-width: 1130px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr);
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+}
